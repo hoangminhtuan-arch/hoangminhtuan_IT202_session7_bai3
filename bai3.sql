@@ -31,5 +31,3 @@ FROM Students s
 WHERE NOT EXISTS (
 SELECT p.StudentsID FROM Payments p WHERE s.id = p.StudentsID
 );
-
--- EXISTS vượt trội ở chỗ, nó có thể ngưng vòng lặp ngay lập tức khi nó tìm thấy, với IN thì sẽ phải đợi lặp hết
